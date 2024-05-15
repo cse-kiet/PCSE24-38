@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rice Leaf Disease Identifier</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="/static/server.js"></script>
+</head>
+<body>
+
+    <div class="container flex">
+        <h1 id="heading">Rice Leaf Disease Identifier</h1>
+        <form class="flex" action="/predict" method="post" enctype="multipart/form-data">
+            <input id="imageInput" type="file" name="file" accept="image/*">
+            <img src="#" id="imagePreview" alt="Image Preview">
+            <div class="btn">
+                <button id="submit" type="submit" value="Predict">Predict</button>
+                <button type="reset" onclick="resetButton()">Reset</button>
+            </div>
+        </form>
+        {% if result %}
+        <h2 id="result">Predicted class: {{ result.class }}</h2>
+        {% endif %}
+    </div>
+    <script src="/static/reset.js"></script>
+
+</body>
+</html>
