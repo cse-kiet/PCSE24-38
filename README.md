@@ -20,11 +20,20 @@ The model is trained to classify rice leaf images into the following disease cla
 ## Deployment
 The trained model is deployed using Flask, a lightweight Python web framework. It accepts images of rice leaves as input and identifies the disease present in the leaf.
 
-## Usage
+## Usage (To execute code)
 To use the deployed model:
 1. Clone the repository.
+  ```bash
+  git clone https://github.com/cse-kiet/PCSE24-38.git
+  ```
 2. Install the required dependencies specified in the `requirements.txt` file.
+  ```bash
+  pip install -r requirement.txt
+  ```
 3. Run the Flask application.
+  ```bash
+  flask --app app run
+  ```
 4. Upload an image of a rice leaf to the application.
 5. The application will predict the disease present in the leaf and display the result.
 
